@@ -21,7 +21,7 @@ struct ContentView: View {
             
             VStack(alignment: .leading) {
 
-                    Text("F1 Racer")
+                    Text("F1 Grand Prix")
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.red)
                     
