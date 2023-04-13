@@ -9,13 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("F1 Racer")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            
+                Text("F1 Racer")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .foregroundColor(.red)
+                
+            HStack {
+                Text("Monza Grand Prix")
+                    .font(.subheadline)
+                Spacer()
+                Text("Italy")
+                    .font(.subheadline)
+            }
         }
         .padding()
     }
