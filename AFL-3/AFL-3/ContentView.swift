@@ -9,24 +9,41 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
+        VStack {
+            MapView()
+                .ignoresSafeArea(edges: .top)
+                .frame(height: 300)
             
-                Text("F1 Racer")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .foregroundColor(.red)
+            CircleImage()
+                .offset(y:-130)
+                .frame(width: 50)
+                .padding(.bottom, -130)
+            
+            VStack(alignment: .leading) {
+
+                    Text("F1 Racer")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.red)
+                    
+                HStack {
+                    Text("Monza Grand Prix")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("Italy")
+                        .font(.subheadline)
+                }
+                .font(.subheadline)
+                .foregroundColor(.secondary)
                 
-            HStack {
-                Text("Monza Grand Prix")
-                    .font(.subheadline)
-                Spacer()
-                Text("Italy")
-                    .font(.subheadline)
+                Divider()
+                
+                Text("About Monza Circuit")
+                    .font(.title2)
+                Text("Monza was built in 1987 in Italy.")
             }
+            .padding()
+            Spacer()
         }
-        .padding()
     }
 }
 
