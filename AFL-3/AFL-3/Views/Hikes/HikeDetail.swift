@@ -11,6 +11,7 @@ struct HikeDetail: View {
     let hike: Hike
     @State var dataToShow = \Hike.Observation.elevation
 
+    //buttons to change graph
     var buttons = [
         ("Elevation", \Hike.Observation.elevation),
         ("Heart Rate", \Hike.Observation.heartRate),

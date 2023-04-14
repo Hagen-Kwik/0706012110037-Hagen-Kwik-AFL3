@@ -7,6 +7,7 @@
 
 import Foundation
 
+// data class for hike data
 struct Hike: Codable, Hashable, Identifiable {
     var id: Int
     var name: String

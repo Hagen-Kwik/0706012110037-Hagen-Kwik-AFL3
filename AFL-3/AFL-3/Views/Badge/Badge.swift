@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Badge: View {
     var badgeSymbols: some View {
+        //rotate each badge 8 times
         ForEach(0..<8) { index in
             RotatedBadgeSymbol(
                 angle: .degrees(Double(index) / Double(8)) * 360.0
@@ -19,8 +20,10 @@ struct Badge: View {
     
     var body: some View {
         ZStack {
+            //call background class
             BadgeBackground()
             
+            //put badge infront
             GeometryReader { geometry in
                 badgeSymbols
                     .scaleEffect(1.0 / 4.0, anchor: .top)

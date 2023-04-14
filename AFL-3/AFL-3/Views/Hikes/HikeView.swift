@@ -8,6 +8,7 @@ A view displaying information about a hike, including an elevation graph.
 import SwiftUI
 
 extension AnyTransition {
+    //for transitions
     static var moveAndFade: AnyTransition {
         .asymmetric(
             insertion: .move(edge: .trailing).combined(with: .opacity),
@@ -21,6 +22,7 @@ struct HikeView: View {
     @State private var showDetail = false
 
     var body: some View {
+        //put graph, title, distance, button
         VStack {
             HStack {
                 HikeGraph(hike: hike, path: \.elevation)

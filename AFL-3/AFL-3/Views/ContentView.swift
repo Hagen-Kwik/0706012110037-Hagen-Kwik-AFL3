@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        //call landmarklist struct
        LandmarkList()
     }
 }

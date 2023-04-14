@@ -9,7 +9,8 @@ import SwiftUI
 
 struct BadgeSymbol: View {
     static let symbolColor = Color(red: 79.0 / 255, green: 79.0 / 255, blue: 191.0 / 255)
-
+    
+    //create a moutain logo split into 2 with path API
     var body: some View {
         GeometryReader { geometry in
             Path { path in

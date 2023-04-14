@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BadgeBackground: View {
     var body: some View {
+        //create gradient background by using path API
         GeometryReader { geometry in
             Path { path in
                 var width: CGFloat = min(geometry.size.width, geometry.size.height)

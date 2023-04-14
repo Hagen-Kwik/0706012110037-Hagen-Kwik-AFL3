@@ -11,6 +11,7 @@ struct CircleImage: View {
     var image: Image
 
     var body: some View {
+        //create image, put border and shadow
         image
             .resizable()
             .aspectRatio(contentMode: .fit)
@@ -25,6 +26,7 @@ struct CircleImage: View {
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
+        //pass picture in argument
         CircleImage(image: Image("AMR21"))
     }
 }
