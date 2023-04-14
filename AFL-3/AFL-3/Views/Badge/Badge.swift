@@ -1,5 +1,5 @@
 //
-//  RotatedBadgeSymbol.swift
+//  Badge.swift
 //  AFL-3
 //
 //  Created by MacBook Pro on 14/04/23.
