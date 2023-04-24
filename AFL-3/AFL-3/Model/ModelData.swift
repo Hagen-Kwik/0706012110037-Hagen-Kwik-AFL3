@@ -23,6 +23,10 @@ final class ModelData: ObservableObject {
             by: { $0.category.rawValue }
         )
     }
+
+    @Published var profile = Profile.default
+    
+
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
