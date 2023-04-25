@@ -16,5 +16,15 @@ struct AFL_3App: App {
             ContentView()
                 .environmentObject(modelData)
         }
+        
+        .commands {
+            LandmarkCommands()
+        }
+        
+    #if os(macOS)
+      Settings {
+          LandmarkSettings()
+      }
+      #endif
     }
 }
