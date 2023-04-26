@@ -13,11 +13,12 @@ struct LandmarkList: View {
     @State private var filter = FilterCategory.all
     @State private var selectedLandmark: Landmark?
 
+    //initialize filter catefories
     enum FilterCategory: String, CaseIterable, Identifiable {
         case all = "All"
-        case lakes = "Lakes"
-        case rivers = "Rivers"
-        case mountains = "Mountains"
+        case lakes = "Ground Effect"
+        case rivers = "Turbo"
+        case mountains = "Hybrid"
         
         var id: FilterCategory { self }
     }
@@ -33,7 +34,7 @@ struct LandmarkList: View {
     }
     
     var title: String {
-        let title = filter == .all ? "Landmarks" : filter.rawValue
+        let title = filter == .all ? "Car Models" : filter.rawValue
         return showFavoritesOnly ? "Favorite \(title)" : title
     }
     
@@ -50,7 +51,7 @@ struct LandmarkList: View {
                     } label: {
                         LandmarkRow(landmark: landmark)
                         }
-                    .tag(landmark)
+                    .tag("\(landmark) Cars")
                     }
                 }
                 .navigationTitle(title)

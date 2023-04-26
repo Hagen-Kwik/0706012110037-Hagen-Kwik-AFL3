@@ -1,8 +1,8 @@
 [
     {
-        "name":"Lonesome Ridge Trail",
+        "name":"Nurburgring Race Track",
         "id":1001,
-        "distance":4.5,
+        "distance":10.5,
         "difficulty":3,
         "observations":[
             {

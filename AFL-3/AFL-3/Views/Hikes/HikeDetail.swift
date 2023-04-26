@@ -13,9 +13,9 @@ struct HikeDetail: View {
 
     //buttons to change graph
     var buttons = [
-        ("Elevation", \Hike.Observation.elevation),
-        ("Heart Rate", \Hike.Observation.heartRate),
-        ("Pace", \Hike.Observation.pace)
+        ("Lap Time", \Hike.Observation.elevation),
+        ("Pace", \Hike.Observation.heartRate),
+        ("Tyre Wear", \Hike.Observation.pace)
     ]
 
     var body: some View {
