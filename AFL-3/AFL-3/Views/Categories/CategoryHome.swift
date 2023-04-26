@@ -14,10 +14,12 @@ struct CategoryHome: View {
     var body: some View {
         NavigationView {
             List {
+                //show feature card
                 PageView(pages: modelData.features.map { FeatureCard(landmark: $0) })
                     .aspectRatio(3 / 2, contentMode: .fit)
                     .listRowInsets(EdgeInsets())
 
+                //show each category
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
                     CategoryRow(categoryName: key, items: modelData.categories[key]!)
                 }
@@ -25,6 +27,7 @@ struct CategoryHome: View {
             }
             .listStyle(.inset)
             .navigationTitle("Featured")
+//            show profile button
             .toolbar {
                 Button {
                     showingProfile.toggle()
@@ -32,6 +35,7 @@ struct CategoryHome: View {
                     Label("User Profile", systemImage: "person.crop.circle")
                 }
             }
+//            call profile page
             .sheet(isPresented: $showingProfile) {
                 ProfileHost()
                     .environmentObject(modelData)

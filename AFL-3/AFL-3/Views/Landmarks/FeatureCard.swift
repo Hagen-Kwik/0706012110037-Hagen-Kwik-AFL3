@@ -11,6 +11,7 @@ struct FeatureCard: View {
     var landmark: Landmark
 
     var body: some View {
+        //put picture and put text and gradient background
         landmark.featureImage?
             .resizable()
             .aspectRatio(3 / 2, contentMode: .fit)
@@ -23,6 +24,7 @@ struct FeatureCard: View {
 struct TextOverlay: View {
     var landmark: Landmark
 
+    //create gradient
     var gradient: LinearGradient {
         .linearGradient(
             Gradient(colors: [.black.opacity(0.6), .black.opacity(0)]),
@@ -31,6 +33,7 @@ struct TextOverlay: View {
     }
 
     var body: some View {
+        //put text on top of picture
         ZStack(alignment: .bottomLeading) {
             gradient
             VStack(alignment: .leading) {

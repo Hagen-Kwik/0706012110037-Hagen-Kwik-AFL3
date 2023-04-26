@@ -10,7 +10,7 @@ import SwiftUI
 struct LandmarkRow: View {
     var landmark: Landmark
     
-    //card vuew for showing landmark data consist of picture and title
+    //card view for showing landmark data consist of picture and title
     var body: some View {
            HStack {
                landmark.image

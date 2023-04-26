@@ -15,7 +15,7 @@ struct PageControl: UIViewRepresentable {
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-
+    //view for making carousel
     func makeUIView(context: Context) -> UIPageControl {
         let control = UIPageControl()
         control.numberOfPages = numberOfPages
@@ -26,7 +26,7 @@ struct PageControl: UIViewRepresentable {
 
         return control
     }
-
+    // update carousel view
     func updateUIView(_ uiView: UIPageControl, context: Context) {
         uiView.currentPage = currentPage
     }

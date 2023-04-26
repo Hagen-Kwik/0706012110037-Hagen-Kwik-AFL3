@@ -57,7 +57,7 @@ struct HikeGraph: View {
         }
     }
 }
-
+//set range
 func rangeOfRanges<C: Collection>(_ ranges: C) -> Range<Double>
     where C.Element == Range<Double> {
     guard !ranges.isEmpty else { return 0..<0 }

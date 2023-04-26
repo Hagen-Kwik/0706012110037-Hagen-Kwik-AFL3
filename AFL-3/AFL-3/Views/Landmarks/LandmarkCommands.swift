@@ -13,6 +13,7 @@ struct LandmarkCommands: Commands {
     var body: some Commands {
         SidebarCommands()
         
+//        make top bar command to remove or mark data as favourite
         CommandMenu("Landmark") {
             Button("\(selectedLandmark?.isFavorite == true ? "Remove" : "Mark") as Favorite") {
                 selectedLandmark?.isFavorite.toggle()

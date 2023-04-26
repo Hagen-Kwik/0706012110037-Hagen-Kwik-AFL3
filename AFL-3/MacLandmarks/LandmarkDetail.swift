@@ -18,6 +18,7 @@ struct LandmarkDetail: View {
 
     var body: some View {
         ScrollView {
+            //place map on top with button to open map
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
                 MapView(coordinate: landmark.locationCoordinate)
                     .ignoresSafeArea(edges: .top)
@@ -30,12 +31,13 @@ struct LandmarkDetail: View {
                 }
                 .padding()
             }
-
+            //place picture
             VStack(alignment: .leading, spacing: 20) {
                 HStack(spacing: 24) {
                     CircleImage(image: landmark.image.resizable())
                         .frame(width: 160, height: 160)
-
+                    
+                    //place title, favourite button
                     VStack(alignment: .leading) {
                         HStack {
                             Text(landmark.name)
@@ -54,7 +56,7 @@ struct LandmarkDetail: View {
                 }
 
                 Divider()
-
+                // detail and subtitle
                 Text("About \(landmark.name)")
                     .font(.title2)
                 Text(landmark.description)

@@ -11,6 +11,7 @@ struct CategoryItem: View {
     var landmark: Landmark
 
     var body: some View {
+        // put image and text together to view
         VStack(alignment: .leading) {
             landmark.image
                 .resizable()

@@ -44,6 +44,7 @@ struct LandmarkList: View {
     
     var body: some View {
         NavigationView {
+            //loop each car's data
             List(selection: $selectedLandmark) {
                 ForEach(filteredLandmarks) { landmark in
                     NavigationLink {
@@ -57,6 +58,7 @@ struct LandmarkList: View {
                 .navigationTitle(title)
                 .frame(minWidth: 300)
                 .toolbar {
+                    //create filter dropdown for category
                 ToolbarItem {
                     Menu {
                         Picker("Category", selection: $filter) {

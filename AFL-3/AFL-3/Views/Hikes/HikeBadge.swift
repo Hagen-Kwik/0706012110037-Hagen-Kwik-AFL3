@@ -12,6 +12,7 @@ struct HikeBadge: View {
 
     var body: some View {
         VStack(alignment: .center) {
+            //call badge symbol and put text
             Badge()
                 .frame(width: 300, height: 300)
                 .scaleEffect(1.0 / 3.0)
